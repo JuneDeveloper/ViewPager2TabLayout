@@ -25,9 +25,7 @@ class ViewPagerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val webView:WebView = view.findViewById(R.id.webView)
-        webView.webViewClient = WebViewClient()
         val viewPagerItem = arguments?.getSerializable("page") as Page
-        Log.d("TAGGGGGGGGGG","$viewPagerItem")
         webView.loadUrl(viewPagerItem.url)
     }
 }
